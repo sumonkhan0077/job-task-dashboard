@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Navbar = () => {
+const ProjectDashboard = () => {
     return (
         <div>
-                this is navbar
+            
         </div>
     );
 };
 
-export default Navbar;
+export default ProjectDashboard;
