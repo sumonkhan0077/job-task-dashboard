@@ -18,7 +18,7 @@ const Login = () => {
         password,
       });
       localStorage.setItem("token", res.data.token);
-      navigate("/dashboard");
+      navigate("/");
 
     } catch (error) {
       alert("Login failed");
