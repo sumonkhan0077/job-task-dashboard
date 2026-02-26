@@ -42,7 +42,7 @@ const TopNavbar = () => {
             {/* Profile */}
             <div className="flex items-center gap-3 cursor-pointer">
               <img
-                src="https://i.pravatar.cc/40"
+                src="https://img.icons8.com/?size=160&id=aZ0WjSq1u1YB&format=png"
                 alt="avatar"
                 className="w-10 h-10 rounded-full"
               />

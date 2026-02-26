@@ -1,5 +1,7 @@
 import React from 'react';
 import DashboardTest from '../Components/DashboardTest';
+import ProjectDashboard from '../Components/ProjectDashboard';
+import AnaDashborad from '../Components/AnaDashborad';
 
 const Dashboard = () => {
     return (
@@ -9,9 +11,11 @@ const Dashboard = () => {
             </div>
 
             <div>
-                
+                <ProjectDashboard/>
             </div>
-            <div></div>
+            <div>
+                <AnaDashborad/>
+            </div>
             <div></div>
         </div>
     );

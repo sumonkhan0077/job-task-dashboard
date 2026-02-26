@@ -14,7 +14,7 @@ import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col md:w-64 bg-gray-100 text-white h-screen rounded-2xl border-gray-800">
+    <div className="flex flex-col w-64 sticky top-0 bg-gray-100 text-white rounded-2xl border-gray-800">
       {/* Logo / Brand */}
       <div className="p-6  border-gray-800">
         <div className="flex items-center gap-3">
@@ -80,7 +80,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile App Promo Card */}
-      <div className="p-2  border-gray-800">
+      <div className="p-2  mt-auto   border-gray-800">
         <div className="bg-gradient-to-br from-emerald-900 to-teal-950 rounded-xl p-3 ">
           <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
             <span className="text-2xl">
