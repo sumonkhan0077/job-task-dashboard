@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import axiosSecure from "../API/axiosSecure";
 
 const stats = [
   {
@@ -30,10 +31,20 @@ const stats = [
 ];
 
 const ProjectDashboard = () => {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axiosSecure
+      .get("/api/products")
+      .then((res) => setProducts(res.data))
+      .catch((err) => console.error(err));
+  }, []);
+  console.log(products)
   return (
     <div className="">
       <div className="grid grid-cols-12 gap-3 mt-4">
-        {stats.map((item, index) => (
+        {products.map((item, index) => (
           <motion.div
             key={index}
             whileHover={{ y: -5 }}
@@ -45,7 +56,7 @@ const ProjectDashboard = () => {
               <h3
                 className={`text-lg font-medium ${index == 0 && "text-white"}`}
               >
-                {item.title}
+                {item.name}
               </h3>
 
               <div
@@ -57,26 +68,26 @@ const ProjectDashboard = () => {
 
             {/* Value */}
             <h2
-              className={`text-5xl font-bold mb-4 ${index == 0 && "text-white"}`}
+              className={`text-4xl font-bold mb-4 ${index == 0 && "text-white"}`}
             >
-              {item.value}
+              {item.price}
             </h2>
 
             {/* Footer */}
             <div className="flex items-center gap-2 text-sm">
-              {item.change && (
+              {item.sales && (
                 <span
                   className={`px-2 py-1 bg-green-600/5 rounded-md text-xs font-medium border border-green-600 ${index == 0 && "text-yellow-300"}`}
                   
                 >
-                  {item.change}
+                  {item.sales} +
                 </span>
               )}
 
               <span
                 className={`text-green-600 text-xs ${index == 0 && "text-yellow-300/85"}`}
               >
-                {item.note}
+                {item.category}
               </span>
             </div>
           </motion.div>

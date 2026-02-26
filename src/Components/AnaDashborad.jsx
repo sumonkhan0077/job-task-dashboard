@@ -1,4 +1,6 @@
+import axios from "axios";
 import {
+    CircleUserRound,
   CloudCog,
   FolderKanban,
   MonitorCog,
@@ -6,10 +8,22 @@ import {
   Pause,
   Share2,
   Square,
+  Video,
 } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axiosSecure from "../API/axiosSecure";
+
 
 const AnaDashborad = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    axiosSecure
+      .get("/api/users")
+      .then((res) => setUsers(res.data))
+      .catch((err) => console.error(err));
+  }, []);
+  // console.log(users)
   return (
     <div className="grid grid-cols-12 grid-rows-9 gap-3 mt-3">
       {/* 1 1 */}
@@ -26,8 +40,8 @@ const AnaDashborad = () => {
             <p className="text-sm text-gray-400 mb-4">
               Time: 02:00 PM - 04:00 PM
             </p>
-            <button className="w-full cursor-pointer bg-gradient-to-br from-emerald-900 to-emerald-700  text-white py-2 rounded-4xl font-normal transition">
-              Start Meeting
+            <button className="w-full cursor-pointer bg-gradient-to-br from-emerald-900 to-emerald-700  text-white py-2 rounded-4xl font-normal transition flex justify-center gap-3">
+              <Video /> Start Meeting
             </button>
           </div>
         </div>
@@ -102,33 +116,40 @@ const AnaDashborad = () => {
 
       {/* 3 1 */}
       <div className="bg-white rounded-2xl p-5 col-span-5 row-span-5">
-        <div className="">
-          <div className="flex justify-between items-center">
+       
+         <div className="">
+          <div className="flex justify-between items-center mb-4">
             <h1 className="font-medium text-xl">Team Collaboration</h1>
             <button className="px-3 py-1 border border-emerald-800 text-emerald-900 rounded-2xl">
               + Add Member
             </button>
           </div>
-          <div className="mt-5">
+  {
+            users.map((user) => (
+       
+          <div key={user.id} className="">
             <div className="flex  justify-between">
               <div className="flex justify-between gap-3 items-center mb-2">
-                <div>
-                  <NotebookText />
+                <div className="bg-[#3493ff96] p-1.5 rounded-full ">
+                  <CircleUserRound />
                 </div>
                 <div>
-                  <h1 className="text-sm">Develop API Endpoint</h1>
+                  <h1 className="text-sm font-semibold">{user.name}</h1>
                   <p className="text-xs text-gray-400 mt-2">
-                    Email: Nov 28, 2026
+                    Email: {user.email}
                   </p>
                 </div>
               </div>
               <div>
-                <button className="border bg-green-500/20 p-1 rounded-lg">
-                  completed
+                <button className={`border bg-green-500/20 text-green-800 px-1 rounded-lg text-sm ${user.status == "inactive" && "bg-red-500/20 text-red-900"}`}>
+                  {user.status}
                 </button>
               </div>
             </div>
           </div>
+               
+            ))
+        }
         </div>
       </div>
 
@@ -148,7 +169,6 @@ const AnaDashborad = () => {
 
             <div className="flex justify-center gap-3">
               <div className="bg-white p-1.5 rounded-full">
-               
                 <Pause className=" " />
               </div>
               <div className="bg-red-500 p-1.5 rounded-full">

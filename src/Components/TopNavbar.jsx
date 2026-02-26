@@ -44,7 +44,7 @@ const TopNavbar = () => {
               <img
                 src="https://img.icons8.com/?size=160&id=aZ0WjSq1u1YB&format=png"
                 alt="avatar"
-                className="w-10 h-10 rounded-full"
+                className="w-10 h-10 bg-purple-600/60 p-1 rounded-full"
               />
               <div className="text-sm">
                 <p className="font-semibold text-gray-800">Totok Michael</p>
