@@ -32,26 +32,26 @@ const Navbar = () => {
             MENU
           </p>
           <nav className="space-y-3 p-3">
-            <NavLink className="flex items-center text-gray-500 rounded-lg hover:text-black  transition">
+            <NavLink to="/dashboard"  className="flex items-center text-gray-500 rounded-lg hover:text-black  transition">
               <LayoutDashboard className="w-5 h-5 mr-3" />
               Dashboard
             </NavLink>
-            <NavLink className="flex items-center text-gray-500 rounded-lg hover:text-black  transition relative">
+            <NavLink to="/dashboard"  className="flex items-center text-gray-500 rounded-lg hover:text-black  transition relative">
               <CheckSquare className="w-5 h-5 mr-3" />
               Tasks
               <span className="absolute right-3 bg-emerald-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                 12+
               </span>
             </NavLink>
-            <NavLink className="flex items-center text-gray-500  rounded-lg hover:text-black  transition">
+            <NavLink to="/dashboard" className="flex items-center text-gray-500  rounded-lg hover:text-black  transition">
               <Calendar className="w-5 h-5 mr-3" />
               Calendar
             </NavLink>
-            <NavLink className="flex items-center text-gray-500 rounded-lg hover:text-black  transition">
+            <NavLink to="/dashboard" className="flex items-center text-gray-500 rounded-lg hover:text-black  transition">
               <BarChart3 className="w-5 h-5 mr-3" />
               Analytics
             </NavLink>
-            <NavLink className="flex items-center text-gray-500  rounded-lg hover:text-black  transition">
+            <NavLink to="/dashboard" className="flex items-center text-gray-500  rounded-lg hover:text-black  transition">
               <Users className="w-5 h-5 mr-3" />
               Team
             </NavLink>
@@ -63,15 +63,15 @@ const Navbar = () => {
             GENERAL
           </p>
           <nav className="space-y-3 p-3">
-            <NavLink className="flex items-center text-gray-500  rounded-lg hover:text-black  transition">
+            <NavLink to="/dashboard" className="flex items-center text-gray-500  rounded-lg hover:text-black  transition">
               <Settings className="w-5 h-5 mr-3" />
               Settings
             </NavLink>
-            <NavLink className="flex items-center text-gray-500  rounded-lg hover:text-black  transition">
+            <NavLink to="/dashboard" className="flex items-center text-gray-500  rounded-lg hover:text-black  transition">
               <HelpCircle className="w-5 h-5 mr-3" />
               Help
             </NavLink>
-            <NavLink className="flex items-center text-gray-500  rounded-lg hover:text-red-500  transition">
+            <NavLink to="/dashboard" className="flex items-center text-gray-500  rounded-lg hover:text-red-500  transition">
               <LogOut className="w-5 h-5 mr-3" />
               Logout
             </NavLink>
