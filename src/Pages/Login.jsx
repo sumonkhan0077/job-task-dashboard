@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-import axiosSecure from "../api/axiosSecure";
+
 import { useNavigate } from "react-router";
+import axiosSecure from "../API/axiosSecure";
 
 const Login = () => {
   const [email, setEmail] = useState("");

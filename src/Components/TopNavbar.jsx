@@ -1,12 +1,13 @@
 import React from "react";
-import { Mail, Bell, Search } from "lucide-react";
+import { Mail, Bell, Search,  } from "lucide-react";
 import { motion } from "framer-motion";
 
 const TopNavbar = () => {
   return (
     <div>
       <div className="w-full rounded-2xl">
-        <div className="flex items-center justify-between bg-gray-100 rounded-2xl shadow-sm px-6 py-3">
+        <div className="flex flex-col lg:flex-row items-center justify-between bg-gray-100 rounded-2xl shadow-sm px-6 py-3">
+        
           {/* Search Section */}
           <div className="flex items-center gap-3 w-1/2">
             <div className="flex items-center bg-white rounded-4xl px-4 py-2 w-full">

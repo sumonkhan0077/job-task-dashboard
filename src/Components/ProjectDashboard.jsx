@@ -48,7 +48,7 @@ const ProjectDashboard = () => {
           <motion.div
             key={index}
             whileHover={{ y: -5 }}
-            className={`rounded-2xl p-6 shadow-sm transition-all duration-300 col-span-3 ${index == 0 && "bg-gradient-to-br from-emerald-900 to-emerald-700"}`}
+            className={`rounded-2xl p-6 shadow-sm transition-all duration-300 col-span-12 md:col-span-5 lg:col-span-3 ${index == 0 && "bg-gradient-to-br from-emerald-900 to-emerald-700"}`}
            
           >
             {/* Header */}

@@ -69,7 +69,7 @@ useEffect(() => {
   return (
     <div className="grid grid-cols-12 grid-rows-9 gap-3 mt-3">
       {/* 2 1 */}
-      <div className=" col-span-6 row-span-4">
+      <div className=" col-span-12 lg:col-span-6 row-span-6 lg:row-span-4">
         <div className="bg-white rounded-2xl p-5 w-full h-full">
           <h2 className="text-xl font-semibold mb-4">Website Analytics</h2>
 
@@ -89,7 +89,7 @@ useEffect(() => {
         </div>
       </div>
       {/* 2 2 */}
-      <div className="bg-white rounded-2xl col-span-3 row-span-4">
+      <div className="bg-white rounded-2xl col-span-12 lg:col-span-3 row-span-9 lg:row-span-4">
         <div className="p-2  border-gray-800">
           <div className=" rounded-xl p-3 ">
             <h1 className="font-medium text-xl mb-3">Reminders</h1>
@@ -108,7 +108,7 @@ useEffect(() => {
       </div>
 
       {/* 2 3 */}
-      <div className="bg-white rounded-2xl col-span-3 row-span-6 p-5">
+      <div className="bg-white rounded-2xl col-span-12 lg:col-span-3 row-span-9 lg:row-span-6 p-5">
         <div className="flex justify-between items-center">
           <h1 className="font-medium text-xl">Project</h1>
           <button className="px-3 py-1 border border-emerald-800 text-emerald-800 rounded-2xl">
@@ -175,7 +175,7 @@ useEffect(() => {
       </div>
 
       {/* 3 1 */}
-      <div className="bg-white rounded-2xl p-5 col-span-5 row-span-5">
+      <div className="bg-white rounded-2xl p-5 col-span-12 lg:col-span-5 row-span-9 lg:row-span-5">
         <div className="">
           <div className="flex justify-between items-center mb-4">
             <h1 className="font-medium text-xl">Team Collaboration</h1>
@@ -211,7 +211,7 @@ useEffect(() => {
       </div>
 
       {/* 3 2  */}
-      <div className="bg-white rounded-2xl col-span-4 row-span-5 p-5">
+      <div className="bg-white rounded-2xl col-span-12 lg:col-span-4 row-span-9 lg:row-span-5 p-5">
         <h2 className="text-xl font-semibold mb-4">User Activity Progress</h2>
 
         <div className="relative flex justify-center">
@@ -254,7 +254,7 @@ useEffect(() => {
       </div>
 
       {/* 3 3 */}
-      <div className="bg-gradient-to-br from-emerald-800 to-teal-950  col-span-3 row-span-3 rounded-2xl">
+      <div className="bg-gradient-to-br from-emerald-800 to-teal-950  col-span-12 lg:col-span-3 row-span-9 lg:row-span-3 rounded-2xl">
         <div className="p-2  border-gray-800">
           <div className=" rounded-xl p-3 ">
             <h1 className="font-normal text-xl mb-3 text-white">

@@ -2,7 +2,7 @@ import React from "react";
 
 const DashboardTest = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex flex-col lg:flex-row justify-between items-center">
       <div>
         <h1 className="text-4xl font-semibold">Dashboard</h1>
         <p className="text-gray-500 mt-3">
